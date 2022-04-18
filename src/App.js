@@ -3,35 +3,36 @@ import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
 import Shop from './routes/shop/shop.component';
 import Authentication from './routes/authentication/authentication.component';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route,  } from 'react-router-dom';
+import Checkout from './routes/checkout/checkout.component';
 function App() {
-  const categories = [
-    {
-      "id": 1,
-      "title": "Hats",
-      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
-    },
-    {
-      "id": 2,
-      "title": "Jackets",
-      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
-    },
-    {
-      "id": 3,
-      "title": "Sneakers",
-      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
-    },
-    {
-      "id": 4,
-      "title": "Womens",
-      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
-    },
-    {
-      "id": 5,
-      "title": "Mens",
-      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
-    }
-  ]
+  // const categories = [
+  //   {
+  //     "id": 1,
+  //     "title": "Hats",
+  //     "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+  //   },
+  //   {
+  //     "id": 2,
+  //     "title": "Jackets",
+  //     "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+  //   },
+  //   {
+  //     "id": 3,
+  //     "title": "Sneakers",
+  //     "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+  //   },
+  //   {
+  //     "id": 4,
+  //     "title": "Womens",
+  //     "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+  //   },
+  //   {
+  //     "id": 5,
+  //     "title": "Mens",
+  //     "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+  //   }
+  // ]
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='shop' element={<Shop />} />
         <Route path='auth' element={<Authentication />} />
+        <Route path='checkout' element={<Checkout />} />
 
       </Route>
 
