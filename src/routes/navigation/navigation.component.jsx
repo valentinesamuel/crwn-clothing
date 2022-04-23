@@ -1,6 +1,6 @@
 import { Fragment, useContext } from "react";
 import { UserContext } from "../../context/user.context";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import {
   NavigationContainer,
