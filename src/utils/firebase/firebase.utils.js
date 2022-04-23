@@ -23,7 +23,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({
@@ -66,7 +66,7 @@ export const getCategoriesAndDocuments = async () => {
 
 export const createUserDocumentFromAuth = async (
   userAuth,
-  additionalInformation
+
 ) => {
   if (!userAuth) return;
   const userDocRef = doc(db, "users", userAuth.uid);
@@ -74,7 +74,7 @@ export const createUserDocumentFromAuth = async (
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
-    const { displayName, email, ...additionalInformation } = userAuth;
+    const { displayName, email, } = userAuth;
     const createdAt = new Date();
 
     try {
